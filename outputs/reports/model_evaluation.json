@@ -1,0 +1,48 @@
+{
+    "best_model": "Logistic Regression",
+    "metrics_summary": [
+        {
+            "Model": "Logistic Regression",
+            "Accuracy": 0.974,
+            "Precision": 0.9666,
+            "Recall": 0.982,
+            "F1_Score": 0.9743,
+            "ROC_AUC": 0.9975
+        },
+        {
+            "Model": "Decision Tree",
+            "Accuracy": 0.956,
+            "Precision": 0.9654,
+            "Recall": 0.9461,
+            "F1_Score": 0.9556,
+            "ROC_AUC": 0.9869
+        },
+        {
+            "Model": "Random Forest",
+            "Accuracy": 0.95,
+            "Precision": 0.9537,
+            "Recall": 0.9461,
+            "F1_Score": 0.9499,
+            "ROC_AUC": 0.9922
+        }
+    ],
+    "features": {
+        "numerical": [
+            "age",
+            "total_orders",
+            "total_spend",
+            "average_order_value",
+            "days_since_last_purchase",
+            "purchase_frequency",
+            "support_tickets",
+            "satisfaction_score",
+            "membership_duration_months"
+        ],
+        "categorical": [
+            "gender",
+            "city",
+            "membership_type"
+        ]
+    },
+    "test_set_size": 1000
+}

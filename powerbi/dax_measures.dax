@@ -1,0 +1,99 @@
+// =====================================================================
+// Power BI DAX Measures Reference
+// Customer Sales, Revenue & Churn Prediction Analytics System
+// =====================================================================
+
+// -------------------------------------------------------------
+// 1. Core Revenue & Volume Measures
+// -------------------------------------------------------------
+
+Total Revenue = 
+SUM('fact_orders'[net_amount])
+
+Total Gross Sales = 
+SUM('fact_orders'[gross_amount])
+
+Total Discounts = 
+SUM('fact_orders'[discount_amount])
+
+Total Orders = 
+DISTINCTCOUNT('fact_orders'[order_id])
+
+Average Order Value (AOV) = 
+DIVIDE([Total Revenue], [Total Orders], 0)
+
+Total Units Sold = 
+SUM('fact_order_items'[quantity])
+
+Gross Profit = 
+SUM('fact_order_items'[gross_profit])
+
+Gross Profit Margin % = 
+DIVIDE([Gross Profit], [Total Revenue], 0) * 100
+
+
+// -------------------------------------------------------------
+// 2. Customer & Retention / Churn Measures
+// -------------------------------------------------------------
+
+Total Customers = 
+DISTINCTCOUNT('dim_customers'[customer_id])
+
+Churned Customers = 
+CALCULATE(
+    COUNTROWS('fact_customer_churn'),
+    'fact_customer_churn'[churn] = 1
+)
+
+Retained Customers = 
+CALCULATE(
+    COUNTROWS('fact_customer_churn'),
+    'fact_customer_churn'[churn] = 0
+)
+
+Churn Rate % = 
+DIVIDE([Churned Customers], [Total Customers], 0) * 100
+
+Retention Rate % = 
+100 - [Churn Rate %]
+
+Average Customer Spend (CLV Proxy) = 
+AVERAGE('fact_customer_churn'[total_spend])
+
+Average Satisfaction Score = 
+AVERAGE('fact_customer_churn'[satisfaction_score])
+
+Average Support Tickets = 
+AVERAGE('fact_customer_churn'[support_tickets])
+
+Average Days Inactive = 
+AVERAGE('fact_customer_churn'[days_since_last_purchase])
+
+Repeat Customers Count = 
+CALCULATE(
+    DISTINCTCOUNT('fact_customer_churn'[customer_id]),
+    'fact_customer_churn'[total_orders] > 1
+)
+
+Repeat Customer Rate % = 
+DIVIDE([Repeat Customers Count], [Total Customers], 0) * 100
+
+
+// -------------------------------------------------------------
+// 3. Time Intelligence (MoM Growth)
+// -------------------------------------------------------------
+
+Previous Month Revenue = 
+CALCULATE(
+    [Total Revenue],
+    DATEADD('fact_orders'[order_date], -1, MONTH)
+)
+
+MoM Revenue Growth % = 
+VAR PrevRev = [Previous Month Revenue]
+RETURN
+IF(
+    ISBLANK(PrevRev) || PrevRev = 0,
+    BLANK(),
+    DIVIDE([Total Revenue] - PrevRev, PrevRev, 0) * 100
+)

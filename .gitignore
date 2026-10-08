@@ -1,0 +1,27 @@
+# Virtual Environment
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.ipynb_checkpoints/
+
+# Environment Variables & Secrets
+.env
+*.local
+
+# Database
+*.sqlite3
+*.db
+
+# Model artifacts (optional to ignore or track, small models can be tracked)
+# models/*.pkl
+
+# OS generated
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Streamlit config / cache
+.streamlit/

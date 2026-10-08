@@ -1,0 +1,26 @@
+product_id,product_code,product_name,category,unit_price,cost_price,stock_quantity
+1,PROD-0001,Noise Cancelling Wireless Headphones,Electronics,149.99,85.0,63
+2,PROD-0002,Ultra HD 4K Smart Monitor 27-inch,Electronics,329.99,210.0,119
+3,PROD-0003,Wireless Mechanical Gaming Keyboard,Electronics,89.99,45.0,53
+4,PROD-0004,Precision Optical Ergonomic Mouse,Electronics,49.99,22.0,70
+5,PROD-0005,Fast Wireless Charging Pad 15W,Electronics,29.99,12.0,71
+6,PROD-0006,Slim-Fit Organic Cotton Denim Jacket,Fashion & Apparel,79.99,34.0,129
+7,PROD-0007,Breathable Performance Running Shoes,Fashion & Apparel,99.5,46.0,207
+8,PROD-0008,Classic Premium Merino Wool Sweater,Fashion & Apparel,69.99,28.0,240
+9,PROD-0009,Water-Resistant All-Weather Windbreaker,Fashion & Apparel,84.99,36.0,377
+10,PROD-0010,Vintage Leather Everyday Messenger Bag,Fashion & Apparel,119.0,52.0,167
+11,PROD-0011,Programmable Smart Air Fryer 5.8L,Home & Kitchen,119.0,62.0,350
+12,PROD-0012,Stainless Steel Thermal Coffee Carafe,Home & Kitchen,34.99,14.5,381
+13,PROD-0013,Cast Iron Pre-Seasoned Dutch Oven 6-Qt,Home & Kitchen,74.99,31.0,168
+14,PROD-0014,High-Speed Blender & Smoothie Maker,Home & Kitchen,89.99,41.0,87
+15,PROD-0015,Aroma Essential Oil Ultrasonic Diffuser,Home & Kitchen,29.99,11.5,171
+16,PROD-0016,Anti-Aging Vitamin C Facial Serum,Beauty & Health,29.95,9.5,117
+17,PROD-0017,Sonic Electric Rechargeable Toothbrush,Beauty & Health,49.99,19.0,379
+18,PROD-0018,Deep Hydration Hyaluronic Moisturizer,Beauty & Health,24.99,8.0,109
+19,PROD-0019,Organic Herbal Revitalizing Hair Oil,Beauty & Health,19.99,6.5,216
+20,PROD-0020,Natural Clay Purifying Face Mask 100g,Beauty & Health,18.5,5.5,212
+21,PROD-0021,High-Density Non-Slip Yoga Mat,Sports & Fitness,39.99,15.0,85
+22,PROD-0022,Adjustable Quick-Select Dumbbell Pair,Sports & Fitness,199.99,110.0,156
+23,PROD-0023,Smart Fitness Tracker with Heart Monitor,Sports & Fitness,69.99,32.0,52
+24,PROD-0024,Insulated Stainless Sports Water Bottle,Sports & Fitness,24.99,8.5,215
+25,PROD-0025,Heavy Duty Resistance Exercise Loop Bands,Sports & Fitness,19.99,6.0,224

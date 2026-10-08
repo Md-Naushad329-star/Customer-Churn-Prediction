@@ -1,0 +1,14 @@
+{
+    "total_customers": 5000,
+    "total_orders": 10510,
+    "total_revenue": 1639645.01,
+    "average_order_value": 156.01,
+    "overall_churn_rate_pct": 50.08,
+    "churned_customers": 2504,
+    "retained_customers": 2496,
+    "avg_customer_age": 35.6,
+    "avg_satisfaction_score": 3.6,
+    "avg_support_tickets": 1.04,
+    "missing_values_count": 0,
+    "duplicate_rows_count": 0
+}
